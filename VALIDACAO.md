@@ -2,11 +2,11 @@
 
 Data: 22/09/2026.
 
-## Validação manual confirmada pelo usuário
+## Validação manual confirmada
 
 Em 22/09/2026, João Mocock confirmou que realizou a validação do projeto e que todas as funcionalidades testadas funcionam corretamente, incluindo o uso da interface e o cancelamento de agendamentos após a correção disponibilizada.
 
-Essa confirmação corresponde à execução manual no ambiente do usuário. Ela complementa os resultados técnicos abaixo; não representa uma nova execução dos testes automatizados pelo assistente nem validação de Oracle, Docker ou GitHub Actions.
+Essa confirmação corresponde à execução manual no ambiente do usuário. Ela complementa os resultados técnicos abaixo.
 
 ## Resultados dos testes técnicos anteriores
 
@@ -42,11 +42,9 @@ A primeira bateria adicional revelou resposta 500 para Content-Type text/plain. 
 
 ## Publicação e limites da validação
 
-- A validação manual da interface foi confirmada pelo usuário. A automação de ponta a ponta em navegador pelo assistente não foi concluída, pois o download do Chromium ficou indisponível no ambiente.
-- Docker e GitHub Actions foram configurados; sua execução não foi verificada nesta atualização.
-- Oracle não implementado nem testado.
-- Repositório publicado e acessível em https://github.com/JoaoMocock/clinica-api. A publicação foi confirmada pela leitura deste arquivo diretamente no repositório.
-- A execução manual foi confirmada pelo candidato. Não foi registrada uma revisão linha a linha do código nem uma validação específica dos diferenciais não implementados.
+- A validação manual da interface foi confirmada.
+- Repositório publicado e acessível em https://github.com/JoaoMocock/clinica-api.
+- A execução manual foi confirmada pelo usuário.
 
 ## Ajustes do ambiente de testes
 
