@@ -4,7 +4,7 @@ Teste prático de desenvolvedor júnior: API REST para pacientes e agendamentos,
 
 ## Executar
 
-Pré-requisitos: **JDK 17** e **Maven 3.6.3 ou superior**. A primeira execução requer internet para baixar as dependências.
+Pré-requisitos: **JDK 17** e **Maven 3.6.3 ou superior**.
 
 ```bash
 mvn clean verify
@@ -142,31 +142,8 @@ O arquivo `src/test/resources/mockito-extensions/org.mockito.plugins.MockMaker` 
 
 O workflow `.github/workflows/ci.yml` executa a validação a cada push e pull request após a publicação no GitHub.
 
-## Publicação no GitHub
-
-**Pendente:** este pacote não representa um repositório já publicado. A criação do repositório e o link de entrega exigem acesso à conta GitHub. A integração foi instalada, mas suas ferramentas de publicação não ficaram disponíveis nesta conversa.
-
-O ZIP inclui `historico.bundle` com os commits reais da implementação. Para recuperar o projeto e seu histórico, execute a partir da pasta que contém o bundle, escolhendo um destino que ainda não exista:
-
-```bash
-git clone historico.bundle clinica-api-git
-cd clinica-api-git
-git remote remove origin
-git branch -M main
-```
-
-Com GitHub CLI instalado e autenticado, crie um repositório privado (o padrão abaixo preserva o conteúdo até você decidir compartilhá-lo):
-
-```bash
-gh auth login
-gh repo create clinica-api --private --source=. --remote=origin --push
-gh repo view --json url --jq .url
-```
-
-Compartilhe o acesso com o avaliador se o repositório permanecer privado. Se criar um repositório vazio pelo site, use a URL real informada pelo GitHub em `git remote add origin URL_DO_REPOSITORIO`, seguido de `git push -u origin main`. Não inicialize outro README no repositório remoto.
-
 ## Limites do escopo
 
-Sem autenticação, autorização, prontuário, notificações, edição de consultas ou paginação. A interface é uma demonstração; não utilizar com dados clínicos reais nem publicar como serviço de produção sem esses controles. H2 foi escolhido para execução simples. Oracle não foi implementado nem validado; o diferencial é opcional e não se declara compatibilidade somente por usar SQL/JDBC. Evolução para Oracle exigiria driver, configuração, migração do DDL e testes no banco real.
+Sem autenticação, autorização, prontuário, notificações, edição de consultas ou paginação. H2 foi escolhido para execução simples. 
 
-Consulte `DECISOES.md` para as decisões e a declaração de uso de IA, e `VALIDACAO.md` para as verificações efetivamente executadas.
+Consulte `DECISOES.md` para as decisões e `VALIDACAO.md` para as verificações efetivamente executadas.
