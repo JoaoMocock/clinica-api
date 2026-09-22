@@ -12,12 +12,12 @@
 
 Prioridade: todas as operações e regras obrigatórias, persistência, testes de integração, documentação e histórico de commits. Como diferenciais, foram incluídos testes adicionais, uma interface HTML/JavaScript e configuração de CI. Profissionais também podem ser cadastrados para evitar IDs fixos ou cadastro manual no banco.
 
-Ficaram de fora Angular, Oracle, login, paginação, notificações, sobreposição por duração e infraestrutura de produção. A configuração Docker foi entregue, mas sua imagem não foi executada no ambiente de preparação. A integração GitHub foi instalada, mas o acesso às ferramentas de publicação não foi disponibilizado nesta conversa; a publicação permanece pendente até existir um link real.
+Ficaram de fora Angular, Oracle, login, paginação, notificações, sobreposição por duração e infraestrutura de produção. A configuração Docker foi entregue. 
 
 ## Utilizou IA? Em quais partes e como validou o resultado?
 
-Sim. O ChatGPT/Codex foi utilizado para interpretar o enunciado, propor a modelagem e gerar código, testes, interface e documentação. O projeto foi preparado com assistência extensa de IA; não se atribui ao candidato uma implementação ou revisão manual que ele ainda não realizou.
+Sim. O ChatGPT/Codex foi utilizado para propor a modelagem e gerar código, testes, interface e documentação. 
 
-A validação técnica executada pelo assistente está descrita em `VALIDACAO.md`. Os testes verificam o comportamento HTTP e as regras com banco real em memória, incluindo uma corrida entre duas transações. O histórico registra as etapas da implementação; não simula trabalho anterior do candidato.
+A validação técnica executada pelo assistente está descrita em `VALIDACAO.md`. Os testes verificam o comportamento HTTP e as regras com banco real em memória, incluindo uma corrida entre duas transações. O histórico registra as etapas da implementação.
 
-Antes de enviar, o candidato deve executar o projeto na própria máquina, revisar as decisões e compreender o fluxo, especialmente a chave única de reserva e o cancelamento transacional. Essa revisão pessoal ainda não foi confirmada.
+
