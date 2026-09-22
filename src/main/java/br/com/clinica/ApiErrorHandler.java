@@ -5,6 +5,7 @@ import java.util.Map;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.*;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
@@ -58,6 +59,12 @@ public class ApiErrorHandler {
   @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
   ResponseEntity<?> metodo(Exception e) {
     return erro(HttpStatus.METHOD_NOT_ALLOWED, "Método não permitido.");
+  }
+
+  @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+  ResponseEntity<?> tipoConteudo(Exception e) {
+    return erro(
+        HttpStatus.UNSUPPORTED_MEDIA_TYPE, "Content-Type não suportado. Use application/json.");
   }
 
   @ExceptionHandler(Exception.class)

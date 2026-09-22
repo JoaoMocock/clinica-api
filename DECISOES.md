@@ -12,7 +12,7 @@
 
 Prioridade: todas as operações e regras obrigatórias, persistência, testes de integração, documentação e histórico de commits. Como diferenciais, foram incluídos testes adicionais, uma interface HTML/JavaScript e configuração de CI. Profissionais também podem ser cadastrados para evitar IDs fixos ou cadastro manual no banco.
 
-Ficaram de fora Angular, Oracle, login, paginação, notificações, sobreposição por duração e infraestrutura de produção. A configuração Docker foi entregue, mas sua imagem não foi executada no ambiente de preparação. A publicação no GitHub depende da conexão da conta e permanece explicitamente pendente até existir um link real.
+Ficaram de fora Angular, Oracle, login, paginação, notificações, sobreposição por duração e infraestrutura de produção. A configuração Docker foi entregue, mas sua imagem não foi executada no ambiente de preparação. A integração GitHub foi instalada, mas o acesso às ferramentas de publicação não foi disponibilizado nesta conversa; a publicação permanece pendente até existir um link real.
 
 ## Utilizou IA? Em quais partes e como validou o resultado?
 

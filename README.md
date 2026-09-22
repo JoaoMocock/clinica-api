@@ -106,6 +106,7 @@ Cada filtro é opcional e pode ser usado isoladamente. Quando combinados, todos 
 | 404 | Paciente, profissional ou agendamento não encontrado |
 | 409 | Horário ocupado ou agendamento já cancelado |
 | 405 | Método HTTP não permitido |
+| 415 | Content-Type não suportado; use application/json |
 | 500 | Erro interno sem exposição de detalhes ao cliente |
 
 Formato de erro:
@@ -143,7 +144,7 @@ O workflow `.github/workflows/ci.yml` executa a validação a cada push e pull r
 
 ## Publicação no GitHub
 
-**Pendente:** este pacote não representa um repositório já publicado. A criação do repositório e o link de entrega exigem acesso à conta GitHub.
+**Pendente:** este pacote não representa um repositório já publicado. A criação do repositório e o link de entrega exigem acesso à conta GitHub. A integração foi instalada, mas suas ferramentas de publicação não ficaram disponíveis nesta conversa.
 
 O ZIP inclui `historico.bundle` com os commits reais da implementação. Para recuperar o projeto e seu histórico, execute a partir da pasta que contém o bundle, escolhendo um destino que ainda não exista:
 

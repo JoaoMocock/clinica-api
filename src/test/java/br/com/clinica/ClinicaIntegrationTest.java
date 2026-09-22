@@ -233,4 +233,42 @@ class ClinicaIntegrationTest {
       executor.shutdownNow();
     }
   }
+
+  @Test
+  void tipoDeConteudoIncorretoRetorna415EmJson() throws Exception {
+    mvc.perform(post("/api/pacientes").contentType("text/plain").content("{\"nome\":\"Ana\"}"))
+        .andExpect(status().isUnsupportedMediaType())
+        .andExpect(content().contentTypeCompatibleWith("application/json"))
+        .andExpect(jsonPath("$.status").value(415));
+  }
+
+  @Test
+  void limitesDeTextoEFusoSaoValidados() throws Exception {
+    mvc.perform(
+            post("/api/pacientes")
+                .contentType("application/json")
+                .content(body(new Cadastro("x".repeat(121)))))
+        .andExpect(status().isBadRequest());
+    mvc.perform(
+            post("/api/agendamentos")
+                .contentType("application/json")
+                .content(
+                    body(
+                        new NovoAgendamento(
+                            paciente.id(), profissional.id(), futuro, "x".repeat(81)))))
+        .andExpect(status().isBadRequest());
+    mvc.perform(
+            post("/api/agendamentos")
+                .contentType("application/json")
+                .content(
+                    body(pedido(futuro)).replace("2030-02-01T12:00:00Z", "2030-02-01T12:00:00")))
+        .andExpect(status().isBadRequest());
+    var a = service.criar(pedido(futuro));
+    mvc.perform(
+            patch("/api/agendamentos/" + a.id() + "/cancelamento")
+                .contentType("application/json")
+                .content(body(new Cancelamento("x".repeat(501)))))
+        .andExpect(status().isBadRequest());
+    assertThat(repository.buscar(a.id()).orElseThrow().status()).isEqualTo(Status.AGENDADO);
+  }
 }
