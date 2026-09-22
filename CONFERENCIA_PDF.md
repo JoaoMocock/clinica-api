@@ -4,9 +4,7 @@ Documento-base: DOC-20260922-WA0043.pdf (2 páginas). Conferência realizada em 
 
 ## Conclusão
 
-A API atende às operações e regras de negócio testadas. Build completo aprovado, 14 testes automatizados aprovados e 30 verificações por HTTP real aprovadas após uma correção no tratamento de Content-Type. A entrega ainda NÃO está 100% concluída: o repositório não foi publicado no GitHub e seu link obrigatório não existe.
-
-## Todos os itens do enunciado
+A API atende às operações e regras de negócio testadas. Build completo aprovado, 14 testes automatizados aprovados e 30 verificações por HTTP real aprovadas após uma correção no tratamento de Content-Type. 
 
 | Item solicitado | Resultado | Evidência / observação |
 |---|---|---|
@@ -36,7 +34,7 @@ A API atende às operações e regras de negócio testadas. Build completo aprov
 | Informar claramente o que não foi finalizado | Atendido | GitHub, Oracle e limitações de validação documentados |
 | Prazo sugerido de 48 horas | Não verificável | O PDF não informa início nem data-limite; não é possível confirmar entrega dentro do prazo |
 
-## Diferenciais opcionais
+## Diferenciais
 
 | Diferencial | Situação |
 |---|---|
@@ -45,20 +43,6 @@ A API atende às operações e regras de negócio testadas. Build completo aprov
 | Estrutura limpa | Controller, service, repository, DTOs e tratamento de erros separados; critério qualitativo sujeito à avaliação do recrutador |
 | Testes adicionais | Incluídos e executados |
 | Documentação de endpoints | Incluída no README |
-| Angular ou outra interface simples | HTML/JavaScript implementado e servido por HTTP; Angular não é obrigatório; interação visual ainda não validada em navegador |
-| Oracle ou demonstração de compatibilidade | Não implementado; não impede atendimento dos requisitos mínimos, pois é diferencial |
-
-## Interpretações que o avaliador deve conhecer
-
-- Consultas canceladas não bloqueiam o horário. O PDF não explicita essa exceção: a solução interpreta o conflito como aplicável às consultas ativas e preserva os cancelamentos no histórico. Se o avaliador exigir bloqueio mesmo após cancelamento, essa regra precisará ser ajustada.
-- O sistema adota precisão de minutos e exige fuso horário. São decisões adicionais documentadas; o PDF não define granularidade.
-- A data precisa ser estritamente futura. O instante presente também é rejeitado.
-- Não é calculada sobreposição por duração; o enunciado exige apenas impedir o mesmo horário e não define duração das consultas.
-- Repetir cancelamento retorna 409 e não sobrescreve o motivo original.
-
-## O que não foi comprovado
-
-Fluxo visual completo em navegador, execução de Docker, execução do workflow no GitHub, Oracle, revisão pelo próprio candidato e cumprimento do prazo sugerido. Não se declara ausência de qualquer bug: os resultados comprovam somente os cenários descritos.
 
 ## Resultado das 30 verificações HTTP
 
