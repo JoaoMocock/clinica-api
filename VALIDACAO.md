@@ -2,7 +2,13 @@
 
 Data: 22/09/2026.
 
-## Resultados confirmados
+## Validação manual confirmada pelo usuário
+
+Em 22/09/2026, João Mocock confirmou que realizou a validação do projeto e que todas as funcionalidades testadas funcionam corretamente, incluindo o uso da interface e o cancelamento de agendamentos após a correção disponibilizada.
+
+Essa confirmação corresponde à execução manual no ambiente do usuário. Ela complementa os resultados técnicos abaixo; não representa uma nova execução dos testes automatizados pelo assistente nem validação de Oracle, Docker ou GitHub Actions.
+
+## Resultados dos testes técnicos anteriores
 
 - `mvn clean verify`: **BUILD SUCCESS**.
 - **14 testes executados; 0 falhas; 0 erros; 0 ignorados.**
@@ -34,13 +40,13 @@ Data: 22/09/2026.
 
 A primeira bateria adicional revelou resposta 500 para Content-Type text/plain. Foi adicionado tratamento específico para retornar 415 em JSON, com teste de regressão. Após a correção, a compilação completa, os 14 testes e as 30 verificações HTTP passaram.
 
-## Limitações explícitas
+## Publicação e limites da validação
 
-- Verificação visual e fluxo interativo em navegador não concluídos: o download do Chromium ficou indisponível no ambiente. O frontend foi inspecionado no código, teve a sintaxe verificada e foi servido pela aplicação; isso não equivale a teste de ponta a ponta no navegador.
-- Docker e GitHub Actions foram configurados, mas não executados nesses serviços.
+- A validação manual da interface foi confirmada pelo usuário. A automação de ponta a ponta em navegador pelo assistente não foi concluída, pois o download do Chromium ficou indisponível no ambiente.
+- Docker e GitHub Actions foram configurados; sua execução não foi verificada nesta atualização.
 - Oracle não implementado nem testado.
-- GitHub não publicado: integração instalada, mas ferramentas de publicação indisponíveis nesta conversa. O pacote inclui histórico Git recuperável em `historico.bundle`.
-- A revisão e execução pelo próprio candidato não foram confirmadas.
+- Repositório publicado e acessível em https://github.com/JoaoMocock/clinica-api. A publicação foi confirmada pela leitura deste arquivo diretamente no repositório.
+- A execução manual foi confirmada pelo candidato. Não foi registrada uma revisão linha a linha do código nem uma validação específica dos diferenciais não implementados.
 
 ## Ajustes do ambiente de testes
 
